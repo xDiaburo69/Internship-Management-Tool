@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Management Tool</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Hardware Management Tool</h1>
+        <nav>
+            <ul>
+                <li><a href="#">User Management</a></li>
+                <li><a href="hardware-table.html">Hardware Management</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2>User Management</h2>
+    <input type="text" id="searchInput" placeholder="Search for device or user...">
+    <table id="devicesTable">
+        <thead>
+            <tr>
+                <th>Hardware</th>
+                <th>User</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamically generated rows -->
+        </tbody>
+    </table>
+    <div id="deviceDetails" style="display: none;">
+        <h2>Device Details</h2>
+        <p id="deviceName"></p>
+        <ul id="detailList">
+            <!-- Dynamically generated details -->
+        </ul>
+    </div>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/overview.js"></script>
+    <script src="assets/js/fetch.js"></script>
+</body>
+</html>

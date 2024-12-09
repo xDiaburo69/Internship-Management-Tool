@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Management</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Hardware Management Tool</h1>
+        <nav>
+            <ul>
+                <li><a href="overview.html">User Management</a></li>
+                <li><a href="#">Hardware Management</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Hardware Management</h1>
+    <form id="addDeviceForm">
+        <div class="input-row">
+            <div class="input-group">
+                <p>Device Type:</p>
+                <select id="assetType" required>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Smartphone">Smartphone</option>
+                    <option value="Monitor">Monitor</option>
+                    <option value="Tablet">Tablet</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <p>Hardware name:</p>
+                <input type="text" id="hardwareName" placeholder="Hardware Name" required>
+            </div>
+            <div class="input-group">
+                <p>Serial number:</p>
+                <input type="text" id="serialNumber" placeholder="S/N" required>
+            </div>
+        </div>
+        <div class="input-row">
+            <div class="input-group">
+                <p>CPU:</p>
+                <input type="text" id="cpu" placeholder="CPU" required>
+            </div>
+            <div class="input-group">
+                <p>RAM:</p>
+                <input type="text" id="ram" placeholder="RAM" required>
+            </div>
+            <div class="input-group">
+                <p>SSD/HDD:</p>
+                <input type="text" id="ssdhdd" placeholder="SSD/HDD" required>
+            </div>
+        </div>
+        <div class="input-row">
+            <div class="input-group">
+                <p>Software:</p>
+                <input type="text" id="software" placeholder="Software" required>
+            </div>
+            <div class="input-group">
+                <p>Licenses Key:</p>
+                <input type="text" id="licenseKey" placeholder="License Key">
+            </div>
+            <div class="input-group">
+                <p>First name:</p>
+                <input type="text" id="firstName" placeholder="First Name" required>
+            </div>
+        </div>
+        <div class="input-row">
+            <div class="input-group">
+                <p>Last name:</p>
+                <input type="text" id="lastName" placeholder="Last Name" required>
+            </div>
+            <div class="input-group">
+                <p>Handed over:</p>
+                <input type="date" id="handedOver" placeholder="Handed Over Date" required>
+            </div>
+            <div class="input-group">
+                <p>Get back:</p>
+                <input type="date" id="getBack" placeholder="Get Back Date">
+            </div>
+        </div>
+        <div class="input-row">
+            <div class="input-group">
+                <p>Hardware condition:</p>
+                <input type="text" id="hwCondition" placeholder="Hardware Condition" required>
+            </div>
+            <div class="input-group">
+                <p>Comment:</p>
+                <input type="text" id="comment" placeholder="Comment">
+            </div>
+        </div>
+        <div class="input-row">
+            <div class="input-group">
+                <p id="in-use">In use:</p>
+                <input type="checkbox" id="inUse">
+            </div>
+        </div>
+        <button type="submit">Add device</button>
+    </form>
+    
+    <table id="hardwareTable">
+        <thead>
+            <tr>
+                <th>Device Type</th>
+                <th>Hardware Name</th>
+                <th>S/N</th>
+                <th>CPU</th>
+                <th>RAM</th>
+                <th>SSD/HDD</th>
+                <th>Software</th>
+                <th>License Key</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Handed Over</th>
+                <th id="get-back">Get Back</th>
+                <th>Condition</th>
+                <th>Comment</th>
+                <th>In Use</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamically generated rows -->
+        </tbody>
+    </table>
+    <div id="pagination-controls">
+        <button id="prevButton">Back</button>
+        <span id="pagination"></span>
+        <button id="nextButton">Next</button>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalDetails"></div>
+        </div>
+    </div>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/hardware-table.js"></script>
+    <script src="assets/js/fetch.js"></script>
+</body>
+</html>
